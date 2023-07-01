@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_web_categorias",
+  "info": {
+    "displayName": "Categoria",
+    "icon": "apps"
+  },
+  "options": {},
+  "attributes": {
+    "imagen": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "nombre": {
+      "type": "string"
+    }
+  }
+}

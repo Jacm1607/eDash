@@ -1,0 +1,61 @@
+{
+  "kind": "collectionType",
+  "collectionName": "productos",
+  "info": {
+    "singularName": "producto",
+    "pluralName": "productos",
+    "displayName": "Producto",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nombre": {
+      "type": "string",
+      "required": true
+    },
+    "descripcion": {
+      "type": "richtext",
+      "required": true
+    },
+    "precio": {
+      "type": "decimal",
+      "required": true,
+      "min": 1,
+      "default": 1
+    },
+    "precio_oferta": {
+      "type": "decimal",
+      "min": 0,
+      "required": true
+    },
+    "limite_oferta": {
+      "type": "date"
+    },
+    "visible": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    },
+    "imagen": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "sku": {
+      "type": "string",
+      "unique": true,
+      "required": true
+    },
+    "marca": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::marca.marca"
+    }
+  }
+}
